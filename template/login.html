@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    
+    <title>login</title>
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body>
+   
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Home</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div class="container">
+          <div class="center">
+              <h1>Login</h1>
+              {% for msg in messages %}
+              <h2>{{msg}}</h2>
+              {% endfor %}
+              <form method="POST">
+                {% csrf_token %}
+                  <div class="txt_field">
+                    <input type="email" class="form-control border-0 p-4" name="email" placeholder="Your Email" required="required" />
+                      <span></span>
+                      <label>Username</label>
+                  </div>
+                  <div class="txt_field">
+                    <input type="password" class="form-control border-0 p-4" name="password" placeholder="Password" required="required" />
+                      <span></span>
+                      <label>Password</label>
+                  </div>
+                 <center>
+                  <button class="btn btn-primary btn-block border-0 py-3" type="submit">Submit</button>
+                  </center>
+              </form>
+          </div>
+        </div>
+      </body>
+    </html>
+
+
+ 

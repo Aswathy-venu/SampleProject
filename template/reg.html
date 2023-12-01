@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    
+    <title>Registration</title>
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
+</head>
+
+<body>
+   
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Home</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div class="container">
+          <div class="center">
+              <h1>Registration</h1>
+              <form method="POST">
+                {% csrf_token %}
+                  <div class="txt_field">
+                    <input type="text" class="" name="name" placeholder="Your Name" required="required" />
+                      <span></span>
+                      <label>Name</label>
+                  </div>
+                  <div class="txt_field">
+                    <input type="email" class="form-control border-0 p-4" name="email"  placeholder="Your Email" required="required" />
+                      <span></span>
+                      <label>Email ID</label>
+                  </div>
+                  <div class="txt_field">
+                    <input type="text" class="form-control border-0 p-4" name="phone" placeholder="Phone Number" required="required" />
+                      <span></span>
+                      <label>Phone Number</label>
+                  </div>
+                  <div class="txt_field">
+                    <input type="password" class="form-control border-0 p-4"  name="password" placeholder="Password" required="required" />
+                      <span></span>
+                      <label>Password</label>
+                  </div>
+                  <div class="txt_field">
+                    <input type="password" class="form-control border-0 p-4" name="cpassword" placeholder="Confirm Password" required="required" />
+                      <span></span>
+                      <label>Confirm Password</label>
+                  </div>
+                 <center>
+                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Submit</button>
+                  </center>
+              </form>
+          </div>
+        </div>
+      </body>
+    </html>
+
+
+ 
+
+
+
+
+
+ 
